@@ -1,0 +1,2 @@
+# 统一换行符，保证 Windows 本地开发与 Linux CI 行为一致
+* text=auto eol=lf
