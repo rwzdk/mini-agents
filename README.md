@@ -1,5 +1,8 @@
 # mini-agents
 
+[![npm version](https://img.shields.io/npm/v/@ordeal/mini-agents.svg)](https://www.npmjs.com/package/@ordeal/mini-agents)
+[![CI](https://github.com/rwzdk/mini-agents/actions/workflows/ci.yml/badge.svg)](https://github.com/rwzdk/mini-agents/actions/workflows/ci.yml)
+
 **零依赖的 TypeScript 多智能体编排库**：Agent 循环、工具调用、`pipeline` / `supervisor` 两种编排模式，全部核心逻辑约 500 行可读源码。注入任意 LLM 客户端（内置 OpenAI 兼容实现，或测试用的 Mock）。
 
 > 这是我的作品集中的"基建层"作品：与其只做应用，不如把 Agent 的内部机制亲手写一遍——工具调用协议、编排循环、事件流、确定性测试，每一层都能讲清楚。
@@ -13,9 +16,17 @@
 
 ## 快速开始
 
+**安装使用**（运行时零依赖）：
+
+```bash
+npm i @ordeal/mini-agents
+```
+
+**本地开发**（克隆本仓库后）：
+
 ```bash
 npm install        # 安装 dev 依赖（运行时零依赖）
-npm test           # 13+ 确定性测试（Mock LLM）
+npm test           # 18 个确定性测试（Mock LLM）
 npm run demo       # 零 Key 演示：pipeline + supervisor 全流程
 ```
 
@@ -132,7 +143,7 @@ npm test
 
 ## Roadmap
 
-- [ ] 发布到 npm
+- [x] 发布到 npm（[@ordeal/mini-agents](https://www.npmjs.com/package/@ordeal/mini-agents)）
 - [ ] agent-workbench 改用本库驱动（应用与框架互相印证）
 - [ ] parallel / DAG 编排模式与循环终止条件
 - [ ] 事件流录制与确定性回放（调试工具）
