@@ -22,7 +22,7 @@ npm run demo       # 零 Key 演示：pipeline + supervisor 全流程
 ### 定义工具（JSON Schema + 自带参数校验）
 
 ```ts
-import { defineTool } from 'mini-agents';
+import { defineTool } from '@ordeal/mini-agents';
 
 const search = defineTool({
   name: 'search',
@@ -39,7 +39,7 @@ const search = defineTool({
 ### 单个 Agent：工具调用循环
 
 ```ts
-import { runAgentToEnd, createOpenAIClient } from 'mini-agents';
+import { runAgentToEnd, createOpenAIClient } from '@ordeal/mini-agents';
 
 const client = createOpenAIClient({
   apiKey: process.env.MINI_AGENTS_API_KEY!,
@@ -57,7 +57,7 @@ const { output, toolRounds, events } = await runAgentToEnd({
 ### pipeline：串行流水线（前一个的输出是后一个的输入）
 
 ```ts
-import { pipeline, runFlowToEnd } from 'mini-agents';
+import { pipeline, runFlowToEnd } from '@ordeal/mini-agents';
 
 const { output, events } = await runFlowToEnd(
   pipeline({
@@ -71,7 +71,7 @@ const { output, events } = await runFlowToEnd(
 ### supervisor：主管模式（router 委派 workers）
 
 ```ts
-import { supervisor, runFlowToEnd } from 'mini-agents';
+import { supervisor, runFlowToEnd } from '@ordeal/mini-agents';
 
 const { output } = await runFlowToEnd(
   supervisor({
