@@ -1,8 +1,21 @@
 {
-  "name": "mini-agents",
+  "name": "@rwzdk/mini-agents",
   "version": "0.1.0",
   "description": "零依赖的 TypeScript 多智能体编排库：可读源码的 Agent 循环、工具调用、pipeline / supervisor 编排，注入任意 LLM 客户端（OpenAI 兼容或 Mock）",
   "type": "module",
+  "author": "rwzdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwzdk/mini-agents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rwzdk/mini-agents/issues"
+  },
+  "homepage": "https://github.com/rwzdk/mini-agents#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
